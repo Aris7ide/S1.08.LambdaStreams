@@ -7,7 +7,7 @@ public class Alumns {
     String course;
     double score;
 
-    public Alumns(String name, int age, double score, String course) {
+    public Alumns(String name, int age, String course, double score) {
         this.name = name;
         this.age = age;
         this.score = score;

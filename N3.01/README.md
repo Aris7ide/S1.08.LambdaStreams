@@ -23,3 +23,10 @@ Llena una lista con 10 alumnos
 
 ## Execution
 - he creado la clase Alumns
+- he instanciado desde el Main 10 alumnos
+- he creado otra clase que lleva la lista de alumnos y instancia todos los alumnos
+- He conseguido crear un metodo en la clase Methods que llama la lista de alumnos y imprime nombres y edades
+- he usado un forEeach(alumns -> System.out.println())
+- he creado un segundo metodo para enseñar solo los nombres que empiezan con A
+- he creado una newList filtrando la otra lista con los nombres que empezan con A
+- 
