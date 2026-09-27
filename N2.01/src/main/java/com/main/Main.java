@@ -4,6 +4,7 @@ import com.interfaces.Operations;
 import com.utils.Methods;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -33,6 +34,25 @@ public class Main {
         System.out.println("Resta: " + minus.operation(x,y));
         System.out.println("Multiplicaciòn " + multiply.operation(x,y));
         System.out.println("Division: " + divide.operation(x,y));
+
+        //EXERCISE 4
+        List<Object> mixedList = Arrays.asList(23,2,"Tree","universe",3,"love",980,"Michael Jackson","Elios");
+
+        System.out.println(mixedList.stream()
+                .sorted(Comparator.comparing
+                        (e -> Character.toLowerCase(String.valueOf(e).charAt(0))))
+                .toList());
+
+        System.out.println(mixedList.stream()
+                .sorted(Comparator.comparing
+                        (e -> String.valueOf(e).toLowerCase().startsWith("e")).reversed())
+                .toList());
+
+        System.out.println(mixedList.stream()
+                .map(e -> e.toString().replaceAll("e","4"))
+                .toList());
+
+        System.out.println(mixedList.stream().filter(e -> e instanceof Integer).toList());
 
     }
 }

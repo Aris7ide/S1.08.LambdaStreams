@@ -27,4 +27,16 @@ Ahora que ya tienes los cimientos, te centrarás en transformar colecciones de f
 - en el main he creado las logicas de suma, resta, multiplicacion y resta. 
 - La logica aqui creo que es demonstrar que la Functional Interfaces pueden ser adaptadas a diferentes logicas.
 ### Exercise 4
-####
+#### Crea una lista que contenga algunas cadenas de texto y números.
+#### Ordénalas por:
+
+- #### Alfabéticamente por su primer carácter. (Nota: charAt(0)devuelve el código numérico del primer carácter)
+- #### Las cadenas que contienen una "e" primero, el resto de cadenas después. Pone el código directamente en la lambda.
+- #### Modifica todos los elementos de la lista que tienen una 'a'. Modifica la 'a' por un '4'.
+- #### Muestra sólo los elementos que son numéricos. (Aunque estén guardados como Strings).
+
+- Para empezar he creado la lista en el main
+- He ordenado con un Compare.comparing transformando todo a String y todo a minuscolas, para que con un charAt(0) poder reordenar la lista
+- Para ordenar las palabras que empiezan con e antes he usado igualmente .sorted con un Comparator.comparing, pero ahi en el Comparator he buscado todos los elementos que tenian una e al principio con .startsWith()
+- Para cambiar todos las e en 4 he podido usar un replaceAll(), he tenido que pasar todos los elementos a String antes.
+- Ya que la lista era mixta de object he podido usar un .Filter con un instanceOf Integer
