@@ -29,4 +29,6 @@ Llena una lista con 10 alumnos
 - he usado un forEeach(alumns -> System.out.println())
 - he creado un segundo metodo para enseñar solo los nombres que empiezan con A
 - he creado una newList filtrando la otra lista con los nombres que empezan con A
-- 
+- he creado el metodo showScoreMoreThanFive() y filtrado los alumos enseñando solo los que tienen mas de  5
+- he hecho lo mismo con showScoreMoreThanFiveAndPHP() solo añadiendo otro filtro por curso
+- he hecho practimente lo mismo con showJavaAndMajor filtrando por edad y curso.

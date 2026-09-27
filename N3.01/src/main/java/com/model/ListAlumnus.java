@@ -10,14 +10,14 @@ public class ListAlumnus {
     public ListAlumnus() {
         this.listAlumnus = new ArrayList<>();
 
-        Alumns alumn1 = new Alumns("Sofia", 20, "Computer Science", 8.5);
+        Alumns alumn1 = new Alumns("Sofia", 20, "PHP", 8.5);
         Alumns alumn2 = new Alumns("Mateo", 22, "Data Science", 9.2);
-        Alumns alumn3 = new Alumns("Lucia", 19, "Software Engineering", 4.8);
-        Alumns alumn4 = new Alumns("Diego", 21, "Cybersecurity", 8.0);
+        Alumns alumn3 = new Alumns("Lucia", 19, "JAVA", 4.8);
+        Alumns alumn4 = new Alumns("Diego", 21, "PHP", 8.0);
         Alumns alumn5 = new Alumns("Elena", 23, "Artificial Intelligence", 9.6);
-        Alumns alumn6 = new Alumns("Carlos", 21, "Data Science", 8.9);
+        Alumns alumn6 = new Alumns("Carlos", 21, "PHP", 8.9);
         Alumns alumn7 = new Alumns("Beatriz", 20, "Cybersecurity", 3.1);
-        Alumns alumn8 = new Alumns("Gabriel", 24, "Software Engineering", 4.4);
+        Alumns alumn8 = new Alumns("Gabriel", 24, "JAVA", 4.4);
         Alumns alumn9 = new Alumns("Valentina", 19, "Artificial Intelligence", 9.8);
         Alumns alumn10 = new Alumns("Aris", 22, "Computer Science", 8.2);
 
