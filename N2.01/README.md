@@ -23,4 +23,8 @@ Ahora que ya tienes los cimientos, te centrarás en transformar colecciones de f
 - en el main he creado un List de Integer y he llamado el metodo Methods.numbersWithCommas()
 ### Exercise 3
 #### Crea una Functional Interface que contenga un método llamado operacio(). Este método debe devolver un float. Inyecta a la interfaz creada mediante una lambda, el cuerpo del método, de forma que se pueda transformar la operación con una suma, una resta, una multiplicación y una división.
-- 
+- He creado la Functional Interface Operations que pida dos Integer y devuelva un float
+- en el main he creado las logicas de suma, resta, multiplicacion y resta. 
+- La logica aqui creo que es demonstrar que la Functional Interfaces pueden ser adaptadas a diferentes logicas.
+### Exercise 4
+####
