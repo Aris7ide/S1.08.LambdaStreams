@@ -33,4 +33,19 @@ Para todos los ejercicios debe utilizarse la API de Java Lambdas and Streams de 
 - y de aqui a la otra forma method reference: .forEach(System.out::println); que ademas IntelliJ sugiere automaticamente
 ### Ejercicio 5
 #### Crea una Functional Interface con un método llamado getPiValue()que debe devolver un double. Desde el main()de la clase principal, instancia la interfaz y asíñale el valor 3.1415. Invoca el método getPiValue()e imprime el resultado.
-- 
+- He credo la interfaz con @FunctionalInterface y he llamado el metodo desde el main
+### Ejercicio 6
+#### Crea una lista con números y cadenas de texto y ordena la lista con las cadenas de más corta a más larga.
+- he creado una lista object mixta de numeros y Strings
+- he llamado el metodo streams()
+- de ahi .filter con un instanceOk para separar los strings
+- he convertido todos los valores en String con .map(elemento -> (String) elemento)
+- de ahi con un .sorted(Comparator.comparing(String::length))
+- y en fin un .toList() para poderlo imprimir
+### Ejercicio 7
+#### Con la lista del ejercicio anterior, ahora ordénala al revés, de cadena más larga a más corta.
+- esto sol hace falta meterle un .reverse al final del Comparator.
+### Ejercicio 8
+#### Crea una Functional Interface que contenga un método llamado reverse(). Este método debe recibir y debe devolver un String. En el main()de la clase principal, inyecta a la interfaz creada mediante una lambda, el cuerpo del método, de modo que devuelva la misma cadena que recibe como parámetro pero al revés. Invoca la instancia de la interfaz pasándole una cadena y comprueba si el resultado es correcto.
+- He creado la functional Interface usando el @FunctionalInterface y especificando que tiene que recibir un String y devolver un String
+- en el main he creado la funcion para que ponga al reverse un String dado, creando un objeto StringInverter inverter y dandole la logica text -> new StringBuilder(text).reverse().toString()
