@@ -17,4 +17,6 @@ Para todos los ejercicios debe utilizarse la API de Java Lambdas and Streams de 
 ## Excecution
 ### Ejercicio 1
 #### A partir de una lista de Strings, escribe un método que devuelve una lista de todas las cadenas que contienen la letra 'o'. Imprime el resultado.
-- a
+- he creado una lista con Arrays.toList() y he usado mas comandos para llegar a una lista imprimible: stream().filter().toList();
+- el .filter lleva la estructura lambda (elemento -> elemento.startsWith())
+- #### el elemento es un elemento de la lista y devuelve lo que està en la segunda parte.

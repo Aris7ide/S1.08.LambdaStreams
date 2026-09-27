@@ -1,4 +1,4 @@
-#Tarea S1.08 - Lambdas & Stream
+# Tarea S1.08 - Lambdas & Stream
 
 ## 📌 Enunciat del exercici
 Las  expresiones lambda  y la API de Streams  son dos de las incorporaciones más potentes de Java 8. Estas funcionalidades permiten escribir código más  conciso ,  expresivo  y  declarativo , haciendo que la manipulación de datos sea más clara y eficiente.
