@@ -10,5 +10,15 @@ public class Main {
 
         System.out.println(listString.stream().filter(elemento -> elemento.startsWith("o")).toList());
 
+        List<String> result = listString.stream()
+                .filter(elemento -> elemento.startsWith("o"))
+                .filter(elemento -> elemento.length() == 4)
+                .toList();
+
+        System.out.println(result);
+
+        List<String> listMonths = Arrays.asList("January","February","March","April","May","June","July","August","September","October","November","December");
+        listMonths.forEach(System.out::println);
+
     }
 }
