@@ -4,12 +4,5 @@ import com.service.Methods;
 
 public class Main {
     static void main(String[] args) {
-
-        Methods.showAlumnsWithNamesAndAges();
-        Methods.showOnlyAlumnsThatStartsWithA();
-        Methods.showScoreMoreThanFive();
-        Methods.showScoreMoreThanFiveAndPHP();
-        Methods.showJavaAndMajor();
-
     }
 }

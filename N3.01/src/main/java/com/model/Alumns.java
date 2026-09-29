@@ -2,10 +2,10 @@ package com.model;
 
 public class Alumns {
 
-    String name;
-    int age;
-    String course;
-    double score;
+    private String name;
+    private int age;
+    private String course;
+    private double score;
 
     public Alumns(String name, int age, String course, double score) {
         this.name = name;
@@ -18,31 +18,16 @@ public class Alumns {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getAge() {
         return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getCourse() {
         return course;
     }
 
-    public void setCourse(String course) {
-        this.course = course;
-    }
-
     public double getScore() {
         return score;
     }
 
-    public void setScore(double score) {
-        this.score = score;
-    }
 }

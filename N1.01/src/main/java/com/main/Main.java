@@ -7,19 +7,26 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Main {
     static void main(String[] args) {
 
+        //todo crea un test por cada ejercicio
+
         // EJERCICIO 1
         List<String> listString = Arrays.asList("boat","dog","cat","oven","orange");
 
-        System.out.println(listString.stream().filter(elemento -> elemento.startsWith("o")).toList());
+        String message = listString.stream()
+                .filter(elemento -> elemento.startsWith("o"))
+                .collect(Collectors.joining(","));
+
+        System.out.println(message);
 
         //EJERCICIO 2
         List<String> result = listString.stream()
                 .filter(elemento -> elemento.startsWith("o"))
-                .filter(elemento -> elemento.length() == 4)
+                .filter(elemento -> elemento.length() > 4)
                 .toList();
 
         System.out.println(result);
@@ -34,14 +41,12 @@ public class Main {
 
         //EJERCICIOS 6/7
         List<Object> mixedList = Arrays.asList(23,3,"house", "boat",345, "trampoline");
-        System.out.println(mixedList.stream().filter(elemento -> elemento instanceof String)
-                .map(elemento -> (String) elemento)
-                .sorted(Comparator.comparing(String::length).reversed())
+        System.out.println(mixedList.stream()
+                .sorted(Comparator.comparing(ob -> String.valueOf(ob).length()).reversed())
                 .toList());
 
         //EJERCICIO 8
         StringInverter inverter = text -> new StringBuilder(text).reverse().toString();
-
         System.out.println(inverter.reverse("Reverse this"));
     }
 }

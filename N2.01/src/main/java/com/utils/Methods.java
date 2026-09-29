@@ -7,7 +7,7 @@ public class Methods {
 
     public static String numbersWithCommas(List<Integer> listNumbers) {
         return listNumbers.stream()
-                .map(number -> (number % 2 == 0 ? "e" : "0") + number)
+                .map(number -> (number % 2 == 0 ? "e" : "o") + number)
                 .collect(Collectors.joining(","));
     }
 

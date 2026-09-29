@@ -13,7 +13,8 @@ public class Main {
         //EXERCISE 1
         List<String> listNames = Arrays.asList("Marco","Laura","Michele","Aristide","Martina","Ada","Gianluca","Ale");
 
-        System.out.println(listNames.stream().filter(name -> name.startsWith("A"))
+        System.out.println(listNames.stream()
+                .filter(name -> name.startsWith("A"))
                 .filter(name -> name.length() == 3)
                 .toList());
 
@@ -52,7 +53,8 @@ public class Main {
                 .map(e -> e.toString().replaceAll("e","4"))
                 .toList());
 
-        System.out.println(mixedList.stream().filter(e -> e instanceof Integer).toList());
-
+        System.out.println(mixedList.stream()
+                .filter(e -> e instanceof Integer)
+                .toList());
     }
 }

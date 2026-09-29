@@ -4,7 +4,7 @@
 Este nivel introduce el uso de lambdas y streams aplicados a una clase propia, Alumne, para simular situaciones reales. Filtrarás y transformarás listas de objetos, aplicando múltiples condiciones y acciones. Esto te ayudará a ver el valor práctico de estas herramientas en proyectos más realistas, con datos más estructurados.
 
 ## Ejercicio 1
-Crear una clase Alumnecon los atributos: nombre, edad, curso y nota.
+Crear una clase Alumne con los atributos: nombre, edad, curso y nota.
 
 Llena una lista con 10 alumnos
 
