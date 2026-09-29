@@ -7,8 +7,6 @@ import java.util.List;
 
 public class Methods {
 
-    //todo atributo lista dentro del Method
-    //todo testear todo
     private List<Alumns> listAlumnus;
 
     public Methods(List<Alumns> listAlumnus) {
