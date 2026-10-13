@@ -17,16 +17,16 @@ public class Main {
         // EJERCICIO 1
         List<String> listString = Arrays.asList("boat","dog","cat","oven","orange");
 
-        String message = listString.stream()
-                .filter(elemento -> elemento.startsWith("o"))
-                .collect(Collectors.joining(","));
+        List<String> message = listString.stream()
+                .filter(elemento -> elemento.contains("o"))
+                .toList();
 
         System.out.println(message);
 
         //EJERCICIO 2
         List<String> result = listString.stream()
-                .filter(elemento -> elemento.startsWith("o"))
-                .filter(elemento -> elemento.length() > 4)
+                .filter(elemento -> elemento.contains("o"))
+                .filter(elemento -> elemento.length() > 5)
                 .toList();
 
         System.out.println(result);
