@@ -1,6 +1,7 @@
 package com.main;
 
 import com.interfaces.Operations;
+import com.service.Exercises;
 import com.utils.Methods;
 
 import java.util.Arrays;
@@ -10,13 +11,12 @@ import java.util.List;
 public class Main {
     static void main(String[] args) {
 
+        Exercises exercises = new Exercises();
+
         //EXERCISE 1
         List<String> listNames = Arrays.asList("Marco","Laura","Michele","Aristide","Martina","Ada","Gianluca","Ale");
 
-        System.out.println(listNames.stream()
-                .filter(name -> name.startsWith("A"))
-                .filter(name -> name.length() == 3)
-                .toList());
+        System.out.println(exercises.exerciseOneFilterNames(listNames));
 
         //EXERCISE 2
         List<Integer> listNumbers = Arrays.asList(5,34,6,43,12,16,2,1);
@@ -37,7 +37,7 @@ public class Main {
         System.out.println("Division: " + divide.operation(x,y));
 
         //EXERCISE 4
-        List<Object> mixedList = Arrays.asList(23,2,"Tree","universe",3,"love",980,"Michael Jackson","Elios");
+        List<Object> mixedList = Arrays.asList(23,2,"Tree","universe",3,"love",980,"Michael Jackson","Elios","23");
 
         System.out.println(mixedList.stream()
                 .sorted(Comparator.comparing
@@ -46,15 +46,31 @@ public class Main {
 
         System.out.println(mixedList.stream()
                 .sorted(Comparator.comparing
-                        (e -> String.valueOf(e).toLowerCase().startsWith("e")).reversed())
+                        (e -> String.valueOf(e).toLowerCase().contains("e")))
                 .toList());
 
         System.out.println(mixedList.stream()
-                .map(e -> e.toString().replaceAll("e","4"))
+                .map(e -> e.toString().replaceAll("a","4"))
                 .toList());
 
         System.out.println(mixedList.stream()
-                .filter(e -> e instanceof Integer)
+                .filter(e -> {
+                    if (e == null) {
+                        return false;
+                    }
+                    if (e instanceof Number) {
+                        return true;
+                    }
+                    if (e instanceof String str) {
+                        try {
+                            Double.parseDouble(str);
+                            return true;
+                        } catch (NumberFormatException ex) {
+                            return false;
+                        }
+                    }
+                    return false;
+                })
                 .toList());
     }
 }
