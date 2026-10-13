@@ -31,19 +31,28 @@ public class Main {
 
         System.out.println(result);
 
-        // EJERCICIOS 3/4
+        // EJERCICIOS 3
         List<String> listMonths = Arrays.asList("January","February","March","April","May","June","July","August","September","October","November","December");
+        listMonths.forEach(month -> System.out.println(month));
+
+        // EJERCICIO 4
         listMonths.forEach(System.out::println);
 
         //EJERCICIO 5
         PiValue pi = () -> 3.1415;
         System.out.println(pi.getPiValue());
 
-        //EJERCICIOS 6/7
+        //EJERCICIOS 6
         List<Object> mixedList = Arrays.asList(23,3,"house", "boat",345, "trampoline");
+        System.out.println(mixedList.stream()
+                .sorted(Comparator.comparing(ob -> String.valueOf(ob).length()))
+                .toList());
+
+        //EJERCICIO 7
         System.out.println(mixedList.stream()
                 .sorted(Comparator.comparing(ob -> String.valueOf(ob).length()).reversed())
                 .toList());
+
 
         //EJERCICIO 8
         StringInverter inverter = text -> new StringBuilder(text).reverse().toString();
