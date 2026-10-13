@@ -14,7 +14,6 @@ public class ServiceTest {
 
     private final Service service = new Service();
 
-    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
     private final PrintStream standardOut = System.out;
 
     @Test
